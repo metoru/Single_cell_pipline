@@ -9,6 +9,10 @@ workflow main{
 	       anndata=anndata,
 	       project_name= project_name
 	   }
+	 output {
+	  File h5adfile=leiden.outputfile
+	  File clustfile=leiden.clustfile
+	  }
 }	       
 task leiden{
 	input{
