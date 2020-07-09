@@ -1,3 +1,19 @@
+version 1.0
+workflow main{
+	input{
+	     File anndata
+	     String project_name
+	   }
+	 call hvg{
+	    input:
+	       anndata=anndata,
+	       project_name= project_name
+	   }
+	 output {
+	  File        h5adfile=hvg.outputfile
+	  Array[File] pngfile=hvg.pngfile
+	  }
+}	       
 task hvg{
 	input {	
 		File     anndata
