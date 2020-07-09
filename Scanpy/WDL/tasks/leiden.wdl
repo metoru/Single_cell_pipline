@@ -1,6 +1,6 @@
 version 1.0
 workflow main{
-	input:{
+	input{
 	     File anndata
 	     String project_name
 	    }
