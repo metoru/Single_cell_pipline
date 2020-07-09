@@ -3,12 +3,12 @@ workflow main{
 	input{
 	     File anndata
 	     String project_name
-	    }
+	   }
 	 call leident{
 	    input:
 	       anndata=anndata,
 	       project_name= project_name
-	      }
+	   }
 }	       
 task leiden{
 	input{
