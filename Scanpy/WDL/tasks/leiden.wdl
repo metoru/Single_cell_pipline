@@ -4,7 +4,7 @@ workflow main{
 	     File anndata
 	     String project_name
 	   }
-	 call leident{
+	 call leiden{
 	    input:
 	       anndata=anndata,
 	       project_name= project_name
